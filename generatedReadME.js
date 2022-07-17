@@ -1,51 +1,76 @@
 
 
+function lBadge(Licenses) {
+    switch (Licenses) {
+        case 'MIT':
+          return '![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
+          
+        case 'Apache 2.0':
+          return '![Apache](https://img.shields.io/badge/License-Apache_2.0-blue.svg)';
+    
+        case 'GPL':
+          return '![GPL](https://img.shields.io/badge/License-GPLv3-blue.svg)';
+    
+        case 'BSD 3-Clause':
+          return '![BSD](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)';
+    
+        default:
+          return '';
+      }
+    
+}
 
-const generateAReadME = ({Title, Motivation, Problem, Learn, Description, Instructions, Contributing, Licenses, Test}) => 
-`##${Title} 
 
-##Description
+const generateAReadME = (inputs) => {
+lBadge(inputs.Licenses);
 
-${Description}
+return `    
+# ${inputs.Title} 
+${lBadge(inputs.Licenses)}
 
-- What was your motivation?
-- ${Motivation}
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- ${Because}
-- What problem does it solve?
-- ${Problem}
-- What did you learn?
-- ${Learn}
+## Description
+${inputs.Description}
 
-##Table of Contents 
+### What was your motivation?
+- ${inputs.Motivation}
+### Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+- ${inputs.Because}
+### What problem does it solve?
+- ${inputs.Problem}
+### What did you learn?
+- ${inputs.Learn}
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#Contributing)
-- [License](#license)
+## Table of Contents 
+
+-[Installation](#installation)
+-[Usage/Instructions](#Usage/Instructions)
+-[Contributing](#Contributing)
+-[License](#license)
 -[Test](#Test)
 -[Questions](#Questions)
 
-##Installation
+## Installation
+- ${inputs.Instructions}
 
-- ${Instructions}
+## Usage/Instructions
 
-##Example
+## Example
+![ReadMe Example](./imgs/ReadME_Example.png)
 
 
-   md
-![alt text](assets/images/screenshot.png)
-    
+## Contributing
+-${inputs.Contributing}
 
-##Contributing
+## License
+-The licese used in this project was:${inputs.Licenses}
+-${lBadge(inputs.Licenses)}
 
--${Contributing}
-
-##License
-
--${Licenses}
+##Tests 
+-${inputs.Tests}
 
 #Questions 
-If you have any questions you can message me on my Git: ${github} and you can also email me. ${email}
+If you have any questions about the repo, open an issue or contact me directly at  ${inputs.email}. You can find more of my work at [pcondori](${inputs.github})
 
-🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆`;
+🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆`
+};
+module.exports = generateAReadME;

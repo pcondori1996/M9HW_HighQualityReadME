@@ -1,5 +1,6 @@
+    
 ##1 
-Apache 2.0
+![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ##Description
 6
@@ -23,25 +24,26 @@ Apache 2.0
 -[Questions](#Questions)
 
 ##Installation
-- 7
+- 4
 
 ##Example
 
 
-  
+
 ![alt text](assets/images/screenshot.png)
-    
+
 
 ##Contributing
--8
+-3
 
 ##License
--Apache 2.0
+-MIT
+![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ##Tests 
--2
+-3
 
 #Questions 
-If you have any questions you can message me on my Git: 344 and you can also email me. 667
+If you have any questions you can message me on my Git: 2 and you can also email me. 1
 
 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆

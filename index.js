@@ -1,5 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateAReadME = require('./generatedReadME');
 
 
 //fs.appendFile('log.txt', `${process.argv[2]}\n`, (err) =>
@@ -64,7 +65,7 @@ const Userinputs = () => {
             type: 'rawlist',
             message: 'Where there any licenses?',
             name: 'Licenses',
-            choices: ['Apache 2.0', 'Boost 1.0', 'BSD 3-Clause', 'BSD 2-Clause'],
+            choices: ['Apache 2.0', 'MIT', 'BSD 3-Clause', 'GPL 3'],
         },
         {
             type: 'input',
@@ -84,79 +85,35 @@ const Userinputs = () => {
     ])
 };
 
-// const lBadge = (Userinputs.Licenses) =>
-// swith(Licenses) {
-//  case 1:
-//     return [![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt);
-// break;
-// case 2:
-//     return [![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt);
-// break;
-// case 3:
-//     return [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause);
-// break;
-//  case 4:
-//     return = [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause);
-// break;
-//     Default: 'No license was chosen';
-//     break;
-// }
-
-const generateAReadME = ({ Title, Motivation,Because, Problem, Learn, Description, Instructions, Contributing, Licenses, Tests, github, email }) =>
-    `##${Title} 
-${Licenses}
-
-##Description
-${Description}
-
-- What was your motivation?
-- ${Motivation}
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- ${Because}
-- What problem does it solve?
-- ${Problem}
-- What did you learn?
-- ${Learn}
-
-##Table of Contents 
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#Contributing)
-- [License](#license)
--[Test](#Test)
--[Questions](#Questions)
-
-##Installation
-- ${Instructions}
-
-##Example
-
-
-  
-![alt text](assets/images/screenshot.png)
+function lBadge(Licenses) {
+    switch (Licenses) {
+        case 'MIT':
+          return '![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
+          
+        case 'Apache 2.0':
+          return '![Apache](https://img.shields.io/badge/License-Apache_2.0-blue.svg)';
     
+        case 'GPL':
+          return '![GPL](https://img.shields.io/badge/License-GPLv3-blue.svg)';
+    
+        case 'BSD 3-Clause':
+          return '![BSD](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)';
+    
+        default:
+          return '';
+      }
+}
 
-##Contributing
--${Contributing}
 
-##License
--${Licenses}
-
-##Tests 
--${Tests}
-
-#Questions 
-If you have any questions you can message me on my Git: ${github} and you can also email me. ${email}
-
-🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆`;
+// 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆`;
 
 const init = () => {
     Userinputs()
 
-    .then((inputs) => fs.writeFileSync('tests.txt', generateAReadME(inputs)))
-    .then(() => console.log('Sucessfully wrote test.text'))
-    .catch((err) => console.error(err));
+        
+        .then((inputs) => fs.writeFileSync('ReadME.md', generateAReadME(inputs)))
+        .then(() => console.log('Sucessfully wrote test.text'))
+        .catch((err) => console.error(err));
 }
 
 init();
