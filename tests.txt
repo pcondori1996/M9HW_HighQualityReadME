@@ -1,0 +1,47 @@
+##1 
+Apache 2.0
+
+##Description
+6
+
+- What was your motivation?
+- 2
+- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+- 3
+- What problem does it solve?
+- 4
+- What did you learn?
+- 5
+
+##Table of Contents 
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#Contributing)
+- [License](#license)
+-[Test](#Test)
+-[Questions](#Questions)
+
+##Installation
+- 7
+
+##Example
+
+
+  
+![alt text](assets/images/screenshot.png)
+    
+
+##Contributing
+-8
+
+##License
+-Apache 2.0
+
+##Tests 
+-2
+
+#Questions 
+If you have any questions you can message me on my Git: 344 and you can also email me. 667
+
+🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆 🏆

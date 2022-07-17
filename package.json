@@ -1,0 +1,22 @@
+{
+  "name": "m9hw_highqualityreadme",
+  "version": "1.0.0",
+  "description": "Made for ReadME Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcondori1996/M9HW_HighQualityReadME.git"
+  },
+  "author": "Paulo Condori Pinedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pcondori1996/M9HW_HighQualityReadME/issues"
+  },
+  "homepage": "https://github.com/pcondori1996/M9HW_HighQualityReadME#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
